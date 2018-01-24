@@ -1,0 +1,34 @@
+{
+  "name": "html-starter",
+  "version": "0.1.0",
+  "description": "A CLI tool to generate HTML directory skeleton.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/src/index.js"
+  },
+  "keywords": [
+    "html",
+    "cli",
+    "create-html"
+  ],
+  "preferGlobal": true,
+  "bin": "./dist/src/index.js",
+  "author": "Burak Karakan",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.13.0",
+    "inquirer": "^5.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "rimraf": "^2.6.2"
+  }
+}
