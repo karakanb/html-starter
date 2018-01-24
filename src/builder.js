@@ -1,4 +1,4 @@
-import Helper from './helpers';
+import File from './file-operations';
 
 export default class {
   constructor(directory) {
@@ -6,6 +6,6 @@ export default class {
   }
 
   build() {
-    Helper.makeDir(this.directory);
+    File.makeDir(this.directory);
   }
 }
