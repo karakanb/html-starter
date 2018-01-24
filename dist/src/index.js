@@ -15,4 +15,4 @@ _commander2.default.version('0.1.0').description('A simple CLI tool to create si
 
 var directory = _commander2.default.args[0];
 var builder = new _builder2.default(directory);
-builder.pp();
+builder.build();

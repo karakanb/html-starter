@@ -1,9 +1,11 @@
+import Helper from './helpers';
+
 export default class {
   constructor(directory) {
     this.directory = directory;
   }
 
-  pp() {
-    console.log(this.directory);
+  build() {
+    Helper.makeDir(this.directory);
   }
 }

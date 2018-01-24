@@ -10,4 +10,4 @@ program
 
 const directory = program.args[0];
 const builder = new Builder(directory);
-builder.pp();
+builder.build();
