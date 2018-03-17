@@ -1,7 +1,7 @@
 {
   "name": "html-starter",
   "version": "0.1.0",
-  "description": "A CLI tool to generate HTML directory skeleton.",
+  "description": "A simple CLI tool to create a simple HTML project skeleton.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,8 @@
   "keywords": [
     "html",
     "cli",
-    "create-html"
+    "create-html",
+    "generator"
   ],
   "preferGlobal": true,
   "bin": "./dist/src/index.js",
