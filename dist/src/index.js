@@ -17,11 +17,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _commander2.default.version('0.1.0').description('A simple CLI tool to create simple HTML project skeleton.').arguments('<output_path>').parse(process.argv);
 
+// Check if the argument is given.
 var directory = _commander2.default.args[0];
 if (typeof directory === 'undefined') {
   _outputter2.default.error('Output path should be given as a string.');
   process.exit(1);
 }
 
+// Build the skeleton output.
 var builder = new _builder2.default(directory);
 builder.build();
