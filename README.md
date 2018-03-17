@@ -7,6 +7,8 @@
 - js
   - main.js
 ```
+## Installation
+`npm install -g html-starter`
 
 ## Usage
 Simply run `html-starter path` to generate the template under the `path` directory.
