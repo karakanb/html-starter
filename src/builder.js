@@ -7,6 +7,9 @@ export default class {
     this.directory = directory;
   }
 
+  /**
+   * Build the template by simply copying the whole template directory.
+   */
   build() {
     output.info('');
     output.success('****************************************');

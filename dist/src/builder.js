@@ -29,6 +29,11 @@ var _class = function () {
     this.directory = directory;
   }
 
+  /**
+   * Build the template by simply copying the whole template directory.
+   */
+
+
   _createClass(_class, [{
     key: 'build',
     value: function build() {
