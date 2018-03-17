@@ -12,6 +12,10 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
+var _outputter = require('./outputter');
+
+var _outputter2 = _interopRequireDefault(_outputter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,18 +27,30 @@ var _class = function () {
 
   _createClass(_class, null, [{
     key: 'makeDir',
+
+    /**
+     * Create a directory if not exists.
+     * @param {string} directory
+     */
     value: function makeDir(directory) {
       if (!_fs2.default.existsSync(directory)) {
         _fs2.default.mkdirSync(directory);
       }
     }
+
+    /**
+     * Copy the given source recursively to the destination.
+     * @param {string} source
+     * @param {string} destination
+     */
+
   }, {
     key: 'copy',
     value: function copy(source, destination) {
       _ncp.ncp.limit = 16;
       (0, _ncp.ncp)(source, destination, function (err) {
         if (err) {
-          return console.error(err);
+          return _outputter2.default.error(err);
         }
         return true;
       });

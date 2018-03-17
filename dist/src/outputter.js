@@ -6,40 +6,61 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _fileOperations = require('./file-operations');
+var _chalk = require('chalk');
 
-var _fileOperations2 = _interopRequireDefault(_fileOperations);
-
-var _outputter = require('./outputter');
-
-var _outputter2 = _interopRequireDefault(_outputter);
+var _chalk2 = _interopRequireDefault(_chalk);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var _class = function () {
-  function _class(directory) {
+  function _class() {
     _classCallCheck(this, _class);
-
-    this.directory = directory;
   }
 
-  _createClass(_class, [{
-    key: 'build',
-    value: function build() {
-      _outputter2.default.info('');
-      _outputter2.default.success('****************************************');
-      _outputter2.default.info('');
+  _createClass(_class, null, [{
+    key: 'success',
 
-      _outputter2.default.warning('Generating the template...');
-      _fileOperations2.default.makeDir(this.directory);
-      _fileOperations2.default.copy(__dirname + '/templates', this.directory);
-      _outputter2.default.success('HTML skeleton has been placed to ' + this.directory + '.');
+    /**
+     *
+     * @param {string} message
+     */
+    value: function success(message) {
+      console.log(_chalk2.default.green(message));
+    }
 
-      _outputter2.default.info('');
-      _outputter2.default.success('****************************************');
-      _outputter2.default.info('');
+    /**
+     *
+     * @param {string} message
+     */
+
+  }, {
+    key: 'warning',
+    value: function warning(message) {
+      console.log(_chalk2.default.yellow(message));
+    }
+
+    /**
+     *
+     * @param {string} message
+     */
+
+  }, {
+    key: 'error',
+    value: function error(message) {
+      console.error(_chalk2.default.bgRed(message));
+    }
+
+    /**
+     *
+     * @param {string} message
+     */
+
+  }, {
+    key: 'info',
+    value: function info(message) {
+      console.log(_chalk2.default.cyan(message));
     }
   }]);
 
@@ -47,3 +68,4 @@ var _class = function () {
 }();
 
 exports.default = _class;
+;

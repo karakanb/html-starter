@@ -18,6 +18,7 @@
   "author": "Burak Karakan",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.3.2",
     "commander": "^2.13.0",
     "inquirer": "^5.0.1",
     "ncp": "^2.0.0"
