@@ -1,6 +1,6 @@
 {
   "name": "html-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple CLI tool to create a simple HTML project skeleton.",
   "main": "src/index.js",
   "scripts": {
