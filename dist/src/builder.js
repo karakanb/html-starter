@@ -25,6 +25,8 @@ var _class = function () {
     key: 'build',
     value: function build() {
       _fileOperations2.default.makeDir(this.directory);
+      _fileOperations2.default.copy(__dirname + '/templates', this.directory);
+      console.log('copied');
     }
   }]);
 

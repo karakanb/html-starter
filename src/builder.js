@@ -7,5 +7,7 @@ export default class {
 
   build() {
     File.makeDir(this.directory);
+    File.copy(`${__dirname}/templates`, this.directory);
+    console.log('Success');
   }
 }
