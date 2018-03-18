@@ -1,4 +1,8 @@
 # html-starter
+<p align="center">
+  <img src="./demo.svg">
+</p>
+
 `html-starter` is a simple CLI tool to generate a simple HTML project structure as follows:
 ```
 - index.html
